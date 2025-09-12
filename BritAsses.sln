@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36408.4 d17.14
+VisualStudioVersion = 17.14.36408.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BritAsses", "BritAsses\BritAsses.csproj", "{285A5490-F82E-42D5-A14D-F391C4B059F9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BristAsses.Core", "BristAsses.Core\BristAsses.Core.csproj", "{A234B0AC-FEF4-4381-846A-F5CABFE1B4D5}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BritAsses.Database", "BritAsses.Database\BritAsses.Database.sqlproj", "{BE30290F-A626-47EC-A701-3E58F90594C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,12 @@ Global
 		{A234B0AC-FEF4-4381-846A-F5CABFE1B4D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A234B0AC-FEF4-4381-846A-F5CABFE1B4D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A234B0AC-FEF4-4381-846A-F5CABFE1B4D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE30290F-A626-47EC-A701-3E58F90594C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE30290F-A626-47EC-A701-3E58F90594C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE30290F-A626-47EC-A701-3E58F90594C8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BE30290F-A626-47EC-A701-3E58F90594C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE30290F-A626-47EC-A701-3E58F90594C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE30290F-A626-47EC-A701-3E58F90594C8}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
