@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36408.4 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BritAsses", "BritAsses\BritAsses.csproj", "{285A5490-F82E-42D5-A14D-F391C4B059F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BristAsses.Core", "BristAsses.Core\BristAsses.Core.csproj", "{A234B0AC-FEF4-4381-846A-F5CABFE1B4D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{285A5490-F82E-42D5-A14D-F391C4B059F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{285A5490-F82E-42D5-A14D-F391C4B059F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{285A5490-F82E-42D5-A14D-F391C4B059F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{285A5490-F82E-42D5-A14D-F391C4B059F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A234B0AC-FEF4-4381-846A-F5CABFE1B4D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A234B0AC-FEF4-4381-846A-F5CABFE1B4D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A234B0AC-FEF4-4381-846A-F5CABFE1B4D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A234B0AC-FEF4-4381-846A-F5CABFE1B4D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {461DA2BE-BBD7-463B-B44D-1AE471D5549D}
+	EndGlobalSection
+EndGlobal

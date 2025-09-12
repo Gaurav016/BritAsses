@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      SA_PASSWORD: "YourStrong!Passw0rd"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserverdata:/var/opt/mssql
+  api:
+    build: ./src/API
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=BritAssesDb;User=sa;Password=YourStrong!Passw0rd;
+    ports:
+      - "5000:80"
+    depends_on:
+      - sqlserver
+volumes:
+  sqlserverdata:
