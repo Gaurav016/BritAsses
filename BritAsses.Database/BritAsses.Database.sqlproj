@@ -58,9 +58,14 @@
     <Folder Include="Properties" />
     <Folder Include="Script" />
     <Folder Include="Tables" />
+    <Folder Include="Script\Data" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Item.sql" />
     <Build Include="Tables\Product.sql" />
+    <None Include="Script\Data\ProductData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.PostDeployment.sql" />
   </ItemGroup>
 </Project>
