@@ -20,7 +20,7 @@ namespace Application.Services
 
         public async Task<IEnumerable<ProductDto>> GetAllAsync()
         {
-            return await _context.Products
+            return await _context.Product
                 .AsNoTracking()
                 .Select(p => new ProductDto
                 {
@@ -35,7 +35,7 @@ namespace Application.Services
 
         public async Task<ProductDto?> GetByIdAsync(int id)
         {
-            var p = await _context.Products.FindAsync(id);
+            var p = await _context.Product.FindAsync(id);
             if (p == null) return null;
             return new ProductDto
             {
@@ -56,7 +56,7 @@ namespace Application.Services
                 CreatedBy = dto.CreatedBy,
                 CreatedOn = DateTime.UtcNow
             };
-            _context.Products.Add(product);
+            _context.Product.Add(product);
             await _context.SaveChangesAsync();
             dto.Id = product.Id;
             dto.CreatedOn = product.CreatedOn;
@@ -65,7 +65,7 @@ namespace Application.Services
 
         public async Task<ProductDto?> UpdateAsync(int id, ProductDto dto)
         {
-            var product = await _context.Products.FindAsync(id);
+            var product = await _context.Product.FindAsync(id);
             if (product == null) return null;
             product.ProductName = dto.ProductName;
             product.ModifiedBy = dto.ModifiedBy;
@@ -79,9 +79,9 @@ namespace Application.Services
 
         public async Task<bool> DeleteAsync(int id)
         {
-            var product = await _context.Products.FindAsync(id);
+            var product = await _context.Product.FindAsync(id);
             if (product == null) return false;
-            _context.Products.Remove(product);
+            _context.Product.Remove(product);
             await _context.SaveChangesAsync();
             return true;
         }
