@@ -33,7 +33,29 @@ namespace BritAsses
             builder.Services.AddScoped<IProductService, ProductService>();
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            builder.Services.AddSwaggerGen(options =>
+            {
+                var jwtSecurityScheme = new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+                {
+                    BearerFormat = "JWT",
+                    Name = "Authorization",
+                    In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+                    Type = Microsoft.OpenApi.Models.SecuritySchemeType.Http,
+                    Scheme = JwtBearerDefaults.AuthenticationScheme,
+                    Description = "Enter JWT Access Token",
+                    Reference = new Microsoft.OpenApi.Models.OpenApiReference
+                    {
+                        Id = JwtBearerDefaults.AuthenticationScheme,
+                        Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme
+                    }
+                };
+
+                options.AddSecurityDefinition("Bearer", jwtSecurityScheme);
+                options.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+                {
+                    { jwtSecurityScheme, Array.Empty<string>()} 
+                });
+            });
 
             builder.Services.AddSingleton<InMemoryRefreshTokenStore>();
 
